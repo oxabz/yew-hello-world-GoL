@@ -258,7 +258,6 @@ impl Component for Grid{
 
     fn view(&self) -> Html {
         let cells = RefCell::borrow(&self.props.cells);
-
         html!{
             <div class={"gridb"} data-height={cells.len().to_string()} data-width={cells.get(0).map(|row|row.len()).unwrap_or(0).to_string()}>
                 {for cells.iter().enumerate().map(|(i, row)| self.draw_row(row,i))}
