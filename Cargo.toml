@@ -1,0 +1,15 @@
+[package]
+name = "GameOfLife"
+version = "0.1.0"
+authors = ["oxabz <legmatt0@gmail.com>"]
+edition = "2018"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+yew = "0.18"
+web-sys = "0.3.55"
+gloo-timers = "0.2"
+getrandom = { version = "0.2.3", features=["js"] }
+rand = "0.8.4"
+instant = {version = "0.1.11", features = [  "wasm-bindgen", "inaccurate" ]  }
